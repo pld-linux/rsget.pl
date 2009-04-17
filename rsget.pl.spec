@@ -24,7 +24,7 @@ Command line downloader for RapidShare-like services.
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_bindir}
-install %SOURCE0 $RPM_BUILD_ROOT%{_bindir}/%{name}
+install %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
