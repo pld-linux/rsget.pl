@@ -17,6 +17,7 @@ Suggests:	netpbm-progs
 Suggests:	ocrad
 Suggests:	perl(Image::Magick)
 Suggests:	perl-GD
+Obsoletes:	rsget2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
