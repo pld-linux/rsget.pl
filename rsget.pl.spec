@@ -6,7 +6,7 @@ Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	http://svn.pld-linux.org/svn/toys/%{name}/rsget.pl
-# Source0-md5:	9f7d4a1713e9b0e554047a82653effb4
+# Source0-md5:	d2a86a5301ad2016296cbf623442f9a2
 Source1:	http://svn.pld-linux.org/svn/toys/rsget.pl/mu_font_db.png
 # Source1-md5:	fae68acfaa2fd5859e74eb79a9da54a1
 URL:		http://svn.pld-linux.org/cgi-bin/viewsvn/toys/rsget.pl/
