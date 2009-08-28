@@ -1,14 +1,12 @@
 %include        /usr/lib/rpm/macros.perl
 Summary:	Command line downloader for RapidShare-like services
 Name:		rsget.pl
-Version:	10390
+Version:	10504
 Release:	1
 License:	GPL v2+
 Group:		Applications
-Source0:	http://svn.pld-linux.org/svn/toys/%{name}/rsget.pl
-# Source0-md5:	d2a86a5301ad2016296cbf623442f9a2
-Source1:	http://svn.pld-linux.org/svn/toys/rsget.pl/mu_font_db.png
-# Source1-md5:	fae68acfaa2fd5859e74eb79a9da54a1
+Source0:	http://ep09.pld-linux.org/~sparky/%{name}-%{version}.tar.bz2
+# Source0-md5:	319a61b35c070283ac51e0dbe7d60627
 URL:		http://svn.pld-linux.org/cgi-bin/viewsvn/toys/rsget.pl/
 BuildRequires:	rpm-perlprov
 Suggests:	ImageMagick-coder-png
@@ -25,14 +23,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Command line downloader for RapidShare-like services.
 
 %prep
-sed 's#\($data_path\) =.*;#\1 = "%{_datadir}/%{name}";#' \
-	< %{SOURCE0} > %{name}
+%setup -q
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}}
-install %{name} $RPM_BUILD_ROOT%{_bindir}/%{name}
-install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/%{name}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
