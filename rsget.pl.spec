@@ -1,12 +1,12 @@
 %include        /usr/lib/rpm/macros.perl
 Summary:	Command line downloader for RapidShare-like services
 Name:		rsget.pl
-Version:	10504
+Version:	10581
 Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	http://ep09.pld-linux.org/~sparky/%{name}-%{version}.tar.bz2
-# Source0-md5:	319a61b35c070283ac51e0dbe7d60627
+# Source0-md5:	47ff67b16f04dbabd7f735e24a041cc0
 URL:		http://svn.pld-linux.org/cgi-bin/viewsvn/toys/rsget.pl/
 BuildRequires:	rpm-perlprov
 Suggests:	ImageMagick-coder-png
