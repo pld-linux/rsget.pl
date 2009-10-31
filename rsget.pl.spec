@@ -12,16 +12,21 @@ BuildRequires:	rpm-perlprov
 Requires:	perl-GD
 Suggests:	ImageMagick-coder-png
 Suggests:	perl(Image::Magick)
+Suggests:	subversion
 Suggests:	tesseract
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define	_noautoprov	^perl(RSGet::.*)$
+%define	_noautoreq	^perl(RSGet::.*)$
 
 %description
 Command line downloader for RapidShare-like services.
 
 Suggested packages:
- - tesseract - highly recommended, required for automatic recognition of
-   most captcha images
+ - subversion - client allows automatic updates from svn repository
+ - tesseract - highly recommended, required for automatic recognition
+   of most captcha images
  - perl(Image::Magick) and ImageMagick-coder-png - better support for
    MegaUpload captcha (higher probability of success)
 
