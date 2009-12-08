@@ -17,7 +17,8 @@ Suggests:	perl-Crypt-Blowfish
 Suggests:	perl-Crypt-Rijndael
 Suggests:	perl-GD
 Suggests:	subversion
-Suggests:	tesseract
+Suggests:	tesseract >= 2.00
+Suggests:	tesseract-lang-en
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
