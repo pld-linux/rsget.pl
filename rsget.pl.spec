@@ -2,7 +2,7 @@
 Summary:	Command line downloader for RapidShare-like services
 Name:		rsget.pl
 Version:	11666
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications
 Source0:	http://rsget.pl/download/%{name}-%{version}.tar.bz2
