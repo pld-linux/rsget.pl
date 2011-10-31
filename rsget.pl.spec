@@ -9,6 +9,7 @@ Source0:	http://rsget.pl/download/%{name}-svn-%{version}.tar.bz2
 # Source0-md5:	6f69fc8852c669af23b96b0240378d8e
 URL:		http://rsget.pl/
 BuildRequires:	rpm-perlprov
+Requires:	perl-JE
 # those two aren't really needed
 Requires:	perl-Proc-Daemon
 Requires:	perl-Term-Size
