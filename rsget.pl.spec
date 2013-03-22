@@ -1,14 +1,18 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Command line downloader for RapidShare-like services
 Name:		rsget.pl
-Version:	12242
+Version:	12641
 Release:	1
 License:	GPL v2+
 Group:		Applications
-Source0:	http://rsget.pl/download/%{name}-svn-%{version}.tar.bz2
-# Source0-md5:	6f69fc8852c669af23b96b0240378d8e
+# svn co http://svn.pld-linux.org/svn/toys/rsget.pl
+# tar -caf rsget.pl-r12641.tar.bz2 rsget.pl --exclude-vcs
+#Source0:	http://rsget.pl/download/%{name}-svn-%{version}.tar.bz2
+Source0:	%{name}-r%{version}.tar.bz2
+# Source0-md5:	b37923318a38b492e93156428a96e82d
 URL:		http://rsget.pl/
 BuildRequires:	rpm-perlprov
+BuildRequires:	rpmbuild(macros) >= 1.654
 Requires:	perl-JE
 # those two aren't really needed
 Requires:	perl-Proc-Daemon
@@ -23,8 +27,7 @@ Suggests:	tesseract-lang-en
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_noautoprov	^perl(RSGet::.*)$
-%define	_noautoreq	^perl(RSGet::.*)$
+%define	_noautoreq_perl	RSGet::.*
 
 %description
 Command line downloader for RapidShare-like services.
@@ -39,7 +42,7 @@ Suggested packages:
  - perl-Crypt-Rijndael - required for Link/CryptIt
 
 %prep
-%setup -q -n %{name}-svn-%{version}
+%setup -q -n %{name}
 
 %install
 rm -rf $RPM_BUILD_ROOT
