@@ -1,7 +1,7 @@
 Summary:	Command line downloader for RapidShare-like services
 Name:		rsget.pl
 Version:	12641
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications
 # svn co http://svn.pld-linux.org/svn/toys/rsget.pl
